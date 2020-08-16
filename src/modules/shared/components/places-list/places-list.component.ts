@@ -10,13 +10,19 @@ export class PlacesListComponent implements OnInit {
   @Input() title: string;
   @Input() places;
   @Output() selectPlace = new EventEmitter();
+  timer;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onPlaceHover(place) {
-    this.selectPlace.emit(place);
+    this.timer = setTimeout(() => {
+      this.selectPlace.emit(place);
+    }, 700);
+  }
+  onPlaceNotHovered() {
+    clearTimeout(this.timer);
   }
 
 }
