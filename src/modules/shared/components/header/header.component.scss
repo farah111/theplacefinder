@@ -13,6 +13,7 @@
     display: flex;
     align-self: center;
     &-name{
+      text-align: center;
       align-self: center;
       display: flex;
       padding: 0 10px;
@@ -22,5 +23,11 @@
       width: 35px;
       height: 35px;
     }
+  }
+}
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+  .header-user-name{
+    padding: 0;
   }
 }

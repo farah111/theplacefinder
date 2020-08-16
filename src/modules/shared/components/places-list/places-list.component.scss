@@ -15,8 +15,30 @@
       background-color: rgba(152, 142, 222, 0.08);
     }
   }
+  &-no-results{
+    color: grey;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-scrollbar{
+    max-height: 420px;
+  }
   &-scrollable{
     margin: 0;
     padding: 0 10px;
   }
+}
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+    .list{
+      height: 200px;
+      &-item {
+        padding: 10px;
+      }
+      &-scrollbar{
+        max-height: 120px;
+      }
+    }
 }

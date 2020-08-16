@@ -3,11 +3,27 @@
   padding-left: 10px;
   flex-direction: row;
   &-map{
-    flex-grow: 3;
+    flex-grow: 10;
     margin: 0 10px 0 0;
   }
   &-list{
-    flex-grow: 1;
+    flex-grow: 2;
     margin: 0 10px 0 0;
+  }
+}
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+  .container{
+    display: flex;
+    padding-right: 10px;
+    flex-direction: column;
+    &-map{
+      flex-grow: 1;
+      margin: 10px 0 0 0;
+    }
+    &-list{
+      flex-grow: 1;
+      margin: 10px 0 0 0;
+    }
   }
 }
