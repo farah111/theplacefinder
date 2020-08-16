@@ -1,0 +1,23 @@
+<form [formGroup]="searchForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Location</mat-label>
+    <input type="text"
+           placeholder="Location"
+           matInput
+           autofocus
+           formControlName="location"
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSearchCriteriaChanged()">
+      <mat-option  *ngFor="let location of placesService.$locations | async" [value]="location.description">
+        {{location.description}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="type" (selectionChange)="onSearchCriteriaChanged()">
+      <mat-option>--None--</mat-option>
+      <mat-option *ngFor="let type of types" [value]="type.value">{{type.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

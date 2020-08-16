@@ -1,0 +1,13 @@
+<div class="list">
+  <h3 class="list-title">{{title}}</h3>
+  <perfect-scrollbar style="max-height: 420px;">
+    <ul class="list-scrollable">
+        <li class="list-item" *ngFor="let place of places" (mouseover)="onPlaceHover(place)">
+          <span>{{place.name}}</span>
+        </li>
+
+    </ul>
+  </perfect-scrollbar>
+
+</div>
+

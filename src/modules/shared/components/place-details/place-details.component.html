@@ -1,0 +1,28 @@
+<div class="details-container">
+  <ng-container *ngIf="placeDetails; else Loading">
+    <h3>{{placeDetails.name}}</h3>
+    <h5 [style.color]="placeDetails.opening_hours.open_now ? 'green' : 'red'"
+        *ngIf="placeDetails.opening_hours">{{placeDetails.opening_hours.open_now ? 'Open' : 'Closed'}}</h5>
+    <h5 *ngIf="placeDetails.formatted_phone_number">Phone Number: {{placeDetails.formatted_phone_number}}</h5>
+    <h5 *ngIf="placeDetails.rating">Rating: {{placeDetails.rating}}</h5>
+    <br/>
+    <ng-container *ngIf="placeDetails.photos && placeDetails.photos.length > 0">
+      <div class="photo">
+        <ng-container *ngFor="let photo of placeDetails.photos.slice(0,3)">
+          <div class="photo-container">
+            <img class="photo-item" [src]="getPhotoUrl(photo.photo_reference)"/>
+            <ng-container *ngIf="photo.html_attributions.length > 0">
+              <div class="photo-attribution" [innerHTML]="photo.html_attributions[0]"></div>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-template #Loading>
+    <div class="spinner-container">
+      <app-spinner></app-spinner>
+    </div>
+  </ng-template>
+</div>
+

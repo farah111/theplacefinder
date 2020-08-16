@@ -1,0 +1,20 @@
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+mat-form-field{
+  margin: 0 5px;
+}
+
+:host ::ng-deep {
+  .mat-form-field-infix{
+    width: 300px;
+  }
+  .mat-form-field-wrapper{
+    padding-bottom: 0;
+  }
+}

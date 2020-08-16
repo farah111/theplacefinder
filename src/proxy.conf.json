@@ -1,0 +1,23 @@
+{
+  "/autocomplete/*": {
+    "target": "https://maps.googleapis.com/maps/api/place/autocomplete/json",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/autocomplete" : ""}
+  },
+  "/search/*": {
+    "target": "https://maps.googleapis.com/maps/api/place/textsearch/json",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/search" : ""}
+  },
+  "/details/*": {
+    "target": "https://maps.googleapis.com/maps/api/place/details/json",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/details" : ""}
+  }
+}

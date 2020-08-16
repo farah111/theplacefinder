@@ -1,0 +1,22 @@
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+.list{
+  height: 500px;
+  width: 100%;
+  &-title{
+    color: grey;
+    padding: 5px 10px;
+  }
+  &-item{
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 10px;
+    &:hover{
+      background-color: rgba(152, 142, 222, 0.08);
+    }
+  }
+  &-scrollable{
+    margin: 0;
+    padding: 0 10px;
+  }
+}

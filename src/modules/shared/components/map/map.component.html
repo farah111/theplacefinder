@@ -1,0 +1,18 @@
+<form>
+  <agm-map style="height: 500px"
+           [latitude]="getLat()"
+           [longitude]="getLng()"
+           [zoom]="zoom">
+    <agm-marker
+      *ngFor="let place of places"
+      (markerClick)="getPlaceDetails(place)"
+      [animation]="place === highlightedPlace ? 'BOUNCE' : ''"
+      [latitude]="place.geometry.location.lat"
+      [longitude]="place.geometry.location.lng"
+      [markerDraggable]="false">
+      <agm-info-window>
+        <strong><app-place-details [placeDetails]="place.place_details"></app-place-details></strong>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</form>

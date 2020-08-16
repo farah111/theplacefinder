@@ -1,0 +1,26 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #4a80f5;
+  color: white;
+  padding: 10px;
+  h2{
+    margin: 0;
+    font-weight: lighter;
+  }
+  &-user{
+    display: flex;
+    align-self: center;
+    &-name{
+      align-self: center;
+      display: flex;
+      padding: 0 10px;
+    }
+    &-photo{
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

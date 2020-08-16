@@ -1,0 +1,25 @@
+.details-container{
+
+  padding: 10px;
+}
+.photo{
+  &-container{
+    margin-bottom: 10px;
+  }
+  &-attribution{
+    color: #cccccc;
+    text-decoration: none;
+    text-align: center;
+  }
+  &-item{
+    margin: 0 auto;
+    display: block;
+    padding: 2px;
+    border-radius: 5px;
+  }
+}
+
+.spinner-container{
+  min-height: 200px;
+  min-width: 200px;
+}
