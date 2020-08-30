@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Types} from '../../../../types';
+import {Types} from '../../../../../types';
 import {PlacesService} from '../../../../core/services/places.service';
 import {debounceTime, map, tap} from 'rxjs/operators';
 @Component({

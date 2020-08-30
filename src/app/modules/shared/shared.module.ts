@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MapComponent } from './components/map/map.component';
 import {AgmCoreModule} from '@agm/core';
-import {environment} from '../../environments/environment';
+import {environment} from '../../../environments/environment';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
